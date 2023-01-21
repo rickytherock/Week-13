@@ -1,0 +1,30 @@
+.login-form {
+  border: 1px solid black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+.layout-container {
+  display: grid;
+  grid-template-rows: 50px 1fr; /* Navigation takes up 50px and the LoginForm takes up remaining space */
+}
+
+.navbar {
+  grid-row: 1 / 2; /* Place the navbar in the first row */
+}
+
+.login-form {
+  grid-row: 2 / 3; /* Place the login-form in the second row */
+  align-self: center; /* center the form horizontally */
+  justify-self: center; /* center the form vertically */
+}
