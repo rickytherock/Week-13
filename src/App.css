@@ -1,30 +1,121 @@
-.login-form {
-  border: 1px solid black;
-}
-.navbar {
+/* Main App Container */
+.App {
   display: flex;
-  justify-content: space-between;
-  background-color: #333;
-  color: #fff;
-  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 1rem;
-}
-.layout-container {
-  display: grid;
-  grid-template-rows: 50px 1fr; /* Navigation takes up 50px and the LoginForm takes up remaining space */
+/* Movie List Container */
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.navbar {
-  grid-row: 1 / 2; /* Place the navbar in the first row */
+/* Individual Movie Container */
+.Movie {
+  width: 300px;
+  height: 450px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px lightgray;
 }
 
-.login-form {
-  grid-row: 2 / 3; /* Place the login-form in the second row */
-  align-self: center; /* center the form horizontally */
-  justify-self: center; /* center the form vertically */
+/* Movie Image */
+.Movie img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Movie Title */
+.Movie h2 {
+  margin: 10px;
+}
+
+/* Movie Rating */
+.Movie .rating {
+  margin: 10px;
+}
+
+/* Star Rating */
+.Stars {
+  display: flex;
+}
+
+.Stars .star {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+/* Full Star */
+.Stars .star.full {
+  background-image: url('https://image.flaticon.com/icons/svg/148/148836.svg');
+  background-size: contain;
+}
+
+/* Empty Star */
+.Stars .star.empty {
+  background-image: url('https://image.flaticon.com/icons/svg/149/149311.svg');
+  background-size: contain;
+}
+
+/* Movie Synopsis */
+.Movie p {
+  margin: 10px;
+}
+
+/* Review List Container */
+.ReviewList {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Review Container */
+.Review {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+/* Review Form Container */
+.ReviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 20px 0;
+}
+
+/* Review Form Input */
+.ReviewForm input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+/* Review Form Button */
+.ReviewForm input[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
